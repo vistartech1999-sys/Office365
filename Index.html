@@ -1530,16 +1530,19 @@
         }
         
         // 4. COMPRAR OFERTA
-        function comprarOferta(tipo) {
-            const oferta = tipo === '6meses' 
-                ? 'Office 365 por 1 Ano - R$10,00' 
-                : 'Office 365 por Vitalício com bônus - R$27,00';
-            
-            alert(`✅ Ótima escolha! Você selecionou: ${oferta}\n\nEm uma implementação real, você seria redirecionado para o checkout.`);
-            
-            // Em produção:
-            // window.location.href = tipo === '6meses' ? '/checkout-6m' : '/checkout-1ano';
-        }
+function comprarOferta(tipo) {
+    const oferta = tipo === '6meses' 
+        ? 'Office 365 por 1 Ano - R$10,00' 
+        : 'Office 365 por Vitalício com bônus - R$27,00';
+
+    
+
+    // Redirecionamento real
+    window.location.href = tipo === '6meses' 
+        ? 'https://pay.lowify.com.br/checkout.php?product_id=5I2kwg'
+        : 'https://pay.lowify.com.br/checkout.php?product_id=BpbgHs';
+}
+
         
         // 5. INICIALIZAR TUDO
         document.addEventListener('DOMContentLoaded', function() {
