@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office 365 Completo - Ativação Imediata</title>
+    <meta name="description" content="Tenha o Office 365 completo funcionando sem pagar caro. Use Excel, Word, Outlook e OneDrive sem limitações.">
+    
+    <style>
+        /* VARIÁVEIS DE CORES */
+        :root {
+            --azul: #0078D4;
+            --azul-escuro: #005A9E;
+            --verde: #107C10;
+            --vermelho: #E81123;
+            --amarelo: #FFB900;
+            --cinza-claro: #F5F5F5;
+            --cinza-escuro: #333333;
+            --whatsapp: #25D366;
+            --roxo: #7B42F6;
+            --laranja: #FF6B35;
+            --bege: #FFF8F0;
+            --verde-claro: #F0FFF0;
+            --azul-claro: #F0F8FF;
+            --roxo-claro: #F8F0FF;
+        }
+        
+        /* RESET MOBILE-FIRST */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, sans-serif;
+            line-height: 1.5;
+            color: var(--cinza-escuro);
+            background: white;
+            -webkit-font-smoothing: antialiased;
+            text-size-adjust: 100%;
+        }
+        
+        .container {
+            width: 100%;
+            padding: 0 16px;
+            max-width: 100%;
+        }
+        
+        /* BANNER OFERTA COM DATA DINÂMICA */
+        .banner-oferta {
+            background: linear-gradient(90deg, #FF416C, #FF4B2B);
+            color: white;
+            padding: 14px 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .hero-sub {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+        
+        /* VIDEO MOBILE */
+        .video-box {
+            margin: 25px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+            padding-bottom: 56.25%;
+        }
+        
+        .video-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            loading: lazy;
+        }
+        
+        /* SEÇÃO DORES - GRADE COM ÍCONES VISUAIS */
+        .secao-dores {
+            background: var(--azul-claro);
+            padding: 40px 0;
+            border-top: 5px solid var(--vermelho);
+            border-bottom: 5px solid var(--vermelho);
+        }
+        
+        .titulo-secao {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--azul);
+            text-align: center;
+        }
+        
+        .grade-dores {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .item-dor {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--vermelho);
+            text-align: center;
+        }
+        
+        .icon-dor {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* SEÇÃO SOLUÇÃO - GRADE COM ÍCONES VISUAIS */
+        .secao-solucao {
+            background: var(--verde-claro);
+            padding: 40px 0;
+            border-top: 5px solid var(--verde);
+            border-bottom: 5px solid var(--verde);
+        }
+        
+        .grade-solucao {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .item-solucao {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--verde);
+            text-align: center;
+        }
+        
+        .icon-solucao {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        /* SEÇÃO DESCRIÇÃO - COR BEGE */
+        .secao-descricao {
+            background: var(--bege);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        /* CARROSSEL INFINITO DE APPS DO OFFICE - COM LOGOS */
+        .carrossel-apps {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            padding: 50px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carrossel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .carrossel-track {
+            display: flex;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+        }
+        
+        .app-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px 20px;
+            margin: 0 12px;
+            min-width: 160px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .app-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            border-radius: 12px;
+        }
+        
+        /* CORES DAS LOGOS DO OFFICE */
+        .logo-excel { background: #217346; color: white; }
+        .logo-word { background: #2B579A; color: white; }
+        .logo-outlook { background: #0072C6; color: white; }
+        .logo-powerpoint { background: #D24726; color: white; }
+        .logo-onedrive { background: #094AB2; color: white; }
+        .logo-onenote { background: #80397B; color: white; }
+        .logo-teams { background: #6264A7; color: white; }
+        .logo-access { background: #A4373A; color: white; }
+        .logo-publisher { background: #0976B4; color: white; }
+        
+        .app-nome {
+            font-weight: 700;
+            color: var(--azul);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .app-desc {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* SEÇÃO PROVA SOCIAL ATÉ COMPARATIVO - COR ROXO CLARO */
+        .secao-prova-comparativo {
+            background: var(--roxo-claro);
+            padding: 40px 0;
+        }
+        
+        /* WHATSAPP CARROSSEL */
+        .whatsapp-box {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            max-width: 320px;
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .whatsapp-topo {
+            background: var(--whatsapp);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .whatsapp-foto {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .whatsapp-info h4 {
+            font-size: 1rem;
+            margin: 0;
+        }
+        
+        .whatsapp-info p {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+        
+        .whatsapp-conversa {
+            padding: 20px 15px;
+            min-height: 280px;
+            background: #e5ddd5;
+            background-image: radial-gradient(circle at 21px 21px, rgba(0,0,0,0.08) 2px, transparent 2px);
+            background-size: 42px 42px;
+        }
+        
+        .whatsapp-msg {
+            margin-bottom: 15px;
+            max-width: 85%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+        }
+        
+        .msg-recebida {
+            background: white;
+            float: left;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .msg-enviada {
+            background: #dcf8c6;
+            float: right;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .msg-hora {
+            font-size: 0.7rem;
+            color: #666;
+            text-align: right;
+            margin-top: 5px;
+            clear: both;
+        }
+        
+        .dots-carrossel {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .dot.ativo {
+            background: var(--whatsapp);
+            transform: scale(1.2);
+        }
+        
+        /* COMPARATIVO */
+        .comparativo-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px 15px;
+            margin: 30px auto;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .tabela-comparativo {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        
+        .tabela-comparativo th {
+            background: var(--azul);
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .tabela-comparativo td {
+            padding: 12px 10px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .td-recurso {
+            text-align: left;
+            font-weight: 500;
+            background: #f8f9fa;
+        }
+        
+        /* OFERTAS */
+        .secao-ofertas {
+            padding: 40px 0;
+            background: white;
+        }
+        
+        .ofertas-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* OFERTA 1 - BRANCO */
+        .oferta-card-1 {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 2px solid var(--azul);
+        }
+        
+        /* OFERTA 2 - AZUL CLARO */
+        .oferta-card-2 {
+            background: var(--azul-claro);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border: 2px solid var(--verde);
+        }
+        
+        .oferta-topo {
+            height: 100px;
+            background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .oferta-topo.oferta2 {
+            background: linear-gradient(135deg, var(--verde), #0e6b0e);
+        }
+        
+        .oferta-conteudo {
+            padding: 25px 20px;
+        }
+        
+        .oferta-titulo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--azul);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .lista-beneficios {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .lista-beneficios li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .lista-beneficios li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--verde);
+            font-weight: bold;
+        }
+        
+        .box-preco {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .preco-antigo {
+            text-decoration: line-through;
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .preco-novo {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--vermelho);
+            margin: 8px 0;
+        }
+        
+        .btn-oferta {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: var(--azul);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .btn-oferta:hover {
+            background: var(--azul-escuro);
+            transform: translateY(-3px);
+        }
+        
+        .btn-oferta.oferta2 {
+            background: var(--verde);
+        }
+        
+        .btn-oferta.oferta2:hover {
+            background: #0e6b0e;
+        }
+        
+        /* FAQ */
+        .secao-faq {
+            background: var(--cinza-claro);
+            padding: 40px 20px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+        }
+        
+        .faq-pergunta {
+            padding: 18px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-pergunta:after {
+            content: "➕";
+            font-size: 1rem;
+        }
+        
+        .faq-pergunta.ativo:after {
+            content: "➖";
+        }
+        
+        .faq-resposta {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-resposta.ativo {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        /* FOOTER */
+        .footer {
+            background: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* RESPONSIVO TABLET */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            
+            .ofertas-grid {
+                grid-template-columns: 1fr 1fr;
+                max-width: 100%;
+            }
+            
+            .grade-dores,
+            .grade-solucao {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                max-width: 100%;
+            }
+            
+            .app-card {
+                min-width: 180px;
+                margin: 0 15px;
+            }
+        }
+        
+        /* ANIMAÇÕES */
+        @keyframes aparecer {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animar {
+            animation: aparecer 0.5s ease forwards;
+        }
+        
+        /* PAUSA NO HOVER DO CARROSSEL */
+        .carrossel-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <!-- BANNER COM DATA DINÂMICA -->
+    <div class="banner-oferta">
+        ⚠️ OFERTA VÁLIDA APENAS POR HOJE - <span id="data-atual"></span> - ÚLTIMAS VAGAS! ⚠️
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>🚀 Tenha o Office 365 completo funcionando sem pagar caro</h1>
+            
+            <div class="video-box">
+                <iframe src="https://www.youtube.com/embed/GTqk5M8K778" 
+                        title="Office 365 funcionando na prática"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="hero-sub">
+                <p>Use Excel, Word, Outlook e OneDrive sem limitações</p>
+                <p style="margin-top: 10px; font-size: 1rem;">
+                    Trabalhe, estude e organize tudo como um profissional — sem versão capada.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DORES - GRADE COM ÍCONES VISUAIS -->
+    <section class="secao-dores">
+        <div class="container">
+            <h2 class="titulo-secao">😤 DORES (identificação total)</h2>
+            <p style="text-align: center; margin-bottom: 25px; font-weight: 600;">
+                Provavelmente hoje você passa por isso:
+            </p>
+            
+            <div class="grade-dores">
+                <div class="item-dor animar">
+                    <div class="icon-dor">📉</div>
+                    <div><strong>Office limitado</strong> atrapalha organizar o trabalho</div>
+                </div>
+                
+                <div class="item-dor animar" style="animation-delay: 0.1s;">
+                    <div class="icon-dor">🚫</div>
+                    <div><strong>Excel não tem os recursos</strong> que você precisa</div>
+                </div>
+                
+                <div class="item-dor animar" style="animation-delay: 0.2s;">
+                    <div class="icon-dor">💰</div>
+                    <div><strong>Não sobra dinheiro</strong> pra ferramentas caras</div>
+                </div>
+                
+                <div class="item-dor animar" style="animation-delay: 0.3s;">
+                    <div class="icon-dor">📂</div>
+                    <div><strong>Arquivos ficam bagunçados</strong> e difíceis de encontrar</div>
+                </div>
+                
+                <div class="item-dor animar" style="animation-delay: 0.4s;">
+                    <div class="icon-dor">⏰</div>
+                    <div><strong>Perde oportunidades</strong> por não ter as ferramentas certas</div>
+                </div>
+            </div>
+            
+            <div style="
+                padding: 20px; 
+                background: white; 
+                border-radius: 10px; 
+                margin-top: 25px; 
+                border-left: 4px solid var(--vermelho);
+                text-align: center;
+            ">
+                <p style="font-weight: 700; margin: 0; font-size: 1.1rem;">
+                    👉 No final das contas, você trabalha mais, se estressa mais e rende menos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUÇÃO - GRADE COM ÍCONES VISUAIS -->
+    <section class="secao-solucao">
+        <div class="container">
+            <h2 class="titulo-secao">💡 SOLUÇÃO (virada de chave)</h2>
+            <p style="text-align: center; margin-bottom: 25px; font-weight: 600;">
+                Com o Microsoft 365 ativado, você passa a ter:
+            </p>
+            
+            <div class="grade-solucao">
+                <div class="item-solucao animar">
+                    <div class="icon-solucao">📊</div>
+                    <div><strong>Excel completo</strong>, sem bloqueios ou limitações</div>
+                </div>
+                
+                <div class="item-solucao animar" style="animation-delay: 0.1s;">
+                    <div class="icon-solucao">📝</div>
+                    <div><strong>Word e Outlook</strong> funcionando 100%</div>
+                </div>
+                
+                <div class="item-solucao animar" style="animation-delay: 0.2s;">
+                    <div class="icon-solucao">☁️</div>
+                    <div><strong>OneDrive</strong> pra salvar tudo na nuvem</div>
+                </div>
+                
+                <div class="item-solucao animar" style="animation-delay: 0.3s;">
+                    <div class="icon-solucao">⚡</div>
+                    <div><strong>Mais organização</strong>, agilidade e profissionalismo</div>
+                </div>
+                
+                <div class="item-solucao animar" style="animation-delay: 0.4s;">
+                    <div class="icon-solucao">💸</div>
+                    <div><strong>Tudo isso</strong> sem pesar no bolso</div>
+                </div>
+            </div>
+            
+            <div style="
+                padding: 20px; 
+                background: white; 
+                border-radius: 10px; 
+                margin-top: 25px; 
+                border-left: 4px solid var(--verde);
+                text-align: center;
+            ">
+                <p style="font-weight: 700; margin: 0; font-size: 1.1rem;">
+                    É literalmente sair do modo gambiarra pro modo profissional.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIÇÃO - COR BEGE -->
+    <section class="secao-descricao">
+        <div class="container">
+            <h2 class="titulo-secao" style="color: #333;">⚡ DESCRIÇÃO DO PRODUTO</h2>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <p style="margin-bottom: 15px; font-size: 1.1rem;">
+                    Pacote Office 365 completo com as principais ferramentas para trabalho, estudo e organização do dia a dia.
+                </p>
+                <p style="font-size: 1.1rem;">
+                    Você cria documentos, planilhas, apresentações e mantém tudo salvo e organizado na nuvem, de forma prática, simples e com excelente custo-benefício.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARROSSEL INFINITO DE APPS DO OFFICE - COM LOGOS -->
+   
+            
+                <!-- CARROSSEL INFINITO DE APPS DO OFFICE - COM IMAGENS REAIS -->
+    <section class="carrossel-apps">
+        <div class="container">
+            <h2 style="color: white; text-align: center; font-size: 1.8rem; margin-bottom: 30px; font-weight: 700;">
+                📦 TUDO INCLUSO NO PACOTE OFFICE 365
+            </h2>
+            <p style="color: rgba(255,255,255,0.9); text-align: center; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Acesso completo a todas as ferramentas profissionais da Microsoft
+            </p>
+            
+            <div class="carrossel-container">
+                <div class="carrossel-track">
+                    <!-- Duplicado para criar efeito infinito -->
+                    <div class="app-card">
+                        <div class="app-logo logo-excel" style="
+                            background: #217346 url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/240px-Microsoft_Excel_2013-2019_logo.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Excel</div>
+                        <div class="app-desc">Planilhas avançadas, fórmulas, gráficos, tabelas dinâmicas</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-word" style="
+                            background: #2B579A url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5AXiQQG2f7I2efKbDUeHij8eBKHHHF1I3Cg&s') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Word</div>
+                        <div class="app-desc">Editor de textos profissional, templates, formatação avançada</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-outlook" style="
+                            background: #0072C6 url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Microsoft_Office_Outlook_%282018–2024%29.svg/330px-Microsoft_Office_Outlook_%282018–2024%29.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Outlook</div>
+                        <div class="app-desc">Email corporativo, calendário, tarefas, contatos</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-powerpoint" style="
+                            background: #D24726 url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_Office_PowerPoint_%282019–2025%29.svg/960px-Microsoft_Office_PowerPoint_%282019–2025%29.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">PowerPoint</div>
+                        <div class="app-desc">Apresentações profissionais, animações, design premium</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-onedrive" style="
+                            background: #094AB2 url('data:image/jpeg;base64,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') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">OneDrive</div>
+                        <div class="app-desc">1TB de armazenamento na nuvem, backup automático</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-onenote" style="
+                            background: #80397B url('data:image/jpeg;base64,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') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">OneNote</div>
+                        <div class="app-desc">Bloco de notas digital, organização de ideias</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-teams" style="
+                            background: #6264A7 url('data:image/jpeg;base64,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') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Teams</div>
+                        <div class="app-desc">Reuniões online, chat, colaboração em tempo real</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-access" style="
+                            background: #A4373A url('data:image/jpeg;base64,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') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Access</div>
+                        <div class="app-desc">Banco de dados, relatórios, formulários profissionais</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-publisher" style="
+                            background: #0976B4 url('data:image/jpeg;base64,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') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Publisher</div>
+                        <div class="app-desc">Design gráfico, newsletters, materiais de marketing</div>
+                    </div>
+                    
+                    <!-- DUPLICAÇÃO PARA EFEITO INFINITO -->
+                    <div class="app-card">
+                        <div class="app-logo logo-excel" style="
+                            background: #217346 url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/240px-Microsoft_Excel_2013-2019_logo.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Excel</div>
+                        <div class="app-desc">Planilhas avançadas, fórmulas, gráficos, tabelas dinâmicas</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-word" style="
+                            background: #2B579A url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5AXiQQG2f7I2efKbDUeHij8eBKHHHF1I3Cg&s') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Word</div>
+                        <div class="app-desc">Editor de textos profissional, templates, formatação avançada</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-outlook" style="
+                            background: #0072C6 url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/240px-Microsoft_Office_Outlook_%282018–present%29.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Outlook</div>
+                        <div class="app-desc">Email corporativo, calendário, tarefas, contatos</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-powerpoint" style="
+                            background: #D24726 url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Microsoft_Office_PowerPoint_%282019–present%29.svg/240px-Microsoft_Office_PowerPoint_%282019–present%29.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">PowerPoint</div>
+                        <div class="app-desc">Apresentações profissionais, animações, design premium</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-onedrive" style="
+                            background: #094AB2 url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Microsoft_Office_OneDrive_%282019–present%29.svg/240px-Microsoft_Office_OneDrive_%282019–present%29.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">OneDrive</div>
+                        <div class="app-desc">1TB de armazenamento na nuvem, backup automático</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-onenote" style="
+                            background: #80397B url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Microsoft_OneNote_2013-2019_logo.svg/240px-Microsoft_OneNote_2013-2019_logo.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">OneNote</div>
+                        <div class="app-desc">Bloco de notas digital, organização de ideias</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-teams" style="
+                            background: #6264A7 url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018–present%29.svg/240px-Microsoft_Office_Teams_%282018–present%29.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Teams</div>
+                        <div class="app-desc">Reuniões online, chat, colaboração em tempo real</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-access" style="
+                            background: #A4373A url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Microsoft_Access_2013-2019_logo.svg/240px-Microsoft_Access_2013-2019_logo.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Access</div>
+                        <div class="app-desc">Banco de dados, relatórios, formulários profissionais</div>
+                    </div>
+                    
+                    <div class="app-card">
+                        <div class="app-logo logo-publisher" style="
+                            background: #0976B4 url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Microsoft_Publisher_2013-2019_logo.svg/240px-Microsoft_Publisher_2013-2019_logo.svg.png') center/contain no-repeat;
+                        "></div>
+                        <div class="app-nome">Publisher</div>
+                        <div class="app-desc">Design gráfico, newsletters, materiais de marketing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL ATÉ COMPARATIVO - ROXO CLARO -->
+    <section class="secao-prova-comparativo">
+        <div class="container">
+            <!-- WHATSAPP -->
+            <h2 class="titulo-secao" style="color: var(--roxo);">⭐ PROVA SOCIAL (conversa real)</h2>
+            <p style="text-align: center; margin-bottom: 25px; color: #666;">
+                Veja o que nossos clientes estão dizendo:
+            </p>
+            
+            <div class="whatsapp-box">
+                <div class="whatsapp-conv ativo" data-slide="0">
+                    <div class="whatsapp-topo">
+                        <div class="whatsapp-foto">CM</div>
+                        <div class="whatsapp-info">
+                            <h4>Carlos M.</h4>
+                            <p>online</p>
+                        </div>
+                    </div>
+                    <div class="whatsapp-conversa">
+                        <div class="whatsapp-msg msg-recebida">
+                            Mano, ativei em menos de 10 minutos 😮<br>
+                            Excel completo, tudo funcionando certinho!
+                            <div class="msg-hora">12:34</div>
+                        </div>
+                        
+                        <div class="whatsapp-msg msg-enviada">
+                            Boa demais 🔥 fico feliz que deu tudo certo!<br>
+                            Qualquer coisa é só chamar.
+                            <div class="msg-hora">12:35 ✓✓</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-conv" data-slide="1" style="display: none;">
+                    <div class="whatsapp-topo">
+                        <div class="whatsapp-foto">JR</div>
+                        <div class="whatsapp-info">
+                            <h4>Juliana R.</h4>
+                            <p>online</p>
+                        </div>
+                    </div>
+                    <div class="whatsapp-conversa">
+                        <div class="whatsapp-msg msg-recebida">
+                            Paguei barato e resolveu meu problema na hora 🙌<br>
+                            Valeu demais!
+                            <div class="msg-hora">14:20</div>
+                        </div>
+                        
+                        <div class="whatsapp-msg msg-enviada">
+                            Top demais 😄 a ideia é justamente facilitar<br>
+                            e não dar dor de cabeça.
+                            <div class="msg-hora">14:21 ✓✓</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="whatsapp-conv" data-slide="2" style="display: none;">
+                    <div class="whatsapp-topo">
+                        <div class="whatsapp-foto">MA</div>
+                        <div class="whatsapp-info">
+                            <h4>Marcos A.</h4>
+                            <p>online</p>
+                        </div>
+                    </div>
+                    <div class="whatsapp-conversa">
+                        <div class="whatsapp-msg msg-recebida">
+                            Uso todo dia no trabalho.<br>
+                            Melhor custo-benefício que já peguei 👍
+                            <div class="msg-hora">09:45</div>
+                        </div>
+                        
+                        <div class="whatsapp-msg msg-enviada">
+                            Que massa! Bom saber que tá te ajudando<br>
+                            no dia a dia 👊
+                            <div class="msg-hora">09:45 ✓✓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dots-carrossel">
+                <div class="dot ativo" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+            </div>
+
+            <!-- COMPARATIVO -->
+            <div class="comparativo-box">
+                <h2 class="titulo-secao" style="color: var(--azul); margin-bottom: 20px;">🧠 COMPARATIVO RÁPIDO</h2>
+                
+                <table class="tabela-comparativo">
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>1 Ano</th>
+                            <th>Vitalicio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-recurso">Office 365 completo</td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                        </tr>
+                        <tr>
+                            <td class="td-recurso">Excel sem limites</td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                        </tr>
+                        <tr>
+                            <td class="td-recurso">Word + Outlook</td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                        </tr>
+                        <tr>
+                            <td class="td-recurso">OneDrive</td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                        </tr>
+                        <tr>
+                            <td class="td-recurso">Bônus exclusivos</td>
+                            <td><span style="color: var(--vermelho); font-weight: bold;">❌</span></td>
+                            <td><span style="color: var(--verde); font-weight: bold;">✅</span></td>
+                        </tr>
+                        <tr>
+                            <td class="td-recurso">Tranquilidade</td>
+                            <td><span style="color: var(--amarelo); font-weight: bold;">⚠️</span></td>
+                            <td><span style="color: var(--vermelho); font-weight: bold;">🔥</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+            
+                <!-- OFERTAS COM LOGO DO OFFICE 365 -->
+    <section class="secao-ofertas">
+        <div class="container">
+            <h2 class="titulo-secao">💰 OFERTAS EXCLUSIVAS</h2>
+            
+            <div class="ofertas-grid">
+                <!-- OFERTA 1 - COM LOGO OFFICE 365 -->
+                <div class="oferta-card-1">
+                    <!-- LOGO OFFICE 365 NO TOPO -->
+                    <div class="logo-office-container" style="
+                        height: 150px;
+                        background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        overflow: hidden;
+                    ">
+                        <!-- LOGO OFFICE 365 -->
+                        <div style="
+                            text-align: center;
+                            color: white;
+                        ">
+                            <div style="
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 10px;
+                            ">
+                                <div style="
+                                    width: 50px;
+                                    height: 50px;
+                                    background: white;
+                                    border-radius: 8px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-right: 12px;
+                                ">
+                                    <div style="
+                                        color: var(--azul);
+                                        font-weight: 800;
+                                        font-size: 1.8rem;
+                                        font-family: 'Segoe UI', sans-serif;
+                                    ">
+                                        365
+                                    </div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="
+                                        font-size: 2rem;
+                                        font-weight: 700;
+                                        line-height: 1;
+                                        font-family: 'Segoe UI', sans-serif;
+                                    ">
+                                        Office
+                                    </div>
+                                    <div style="
+                                        font-size: 1.2rem;
+                                        opacity: 0.9;
+                                        font-weight: 400;
+                                    ">
+                                        Microsoft
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                                background: rgba(255,255,255,0.15);
+                                padding: 8px 20px;
+                                border-radius: 20px;
+                                display: inline-block;
+                                margin-top: 5px;
+                            ">
+                                1 ANO DE ACESSO
+                            </div>
+                        </div>
+                        
+                        <!-- Efeitos decorativos -->
+                        <div style="
+                            position: absolute;
+                            bottom: -40px;
+                            right: -40px;
+                            width: 100px;
+                            height: 100px;
+                            background: rgba(255,255,255,0.1);
+                            border-radius: 50%;
+                        "></div>
+                        <div style="
+                            position: absolute;
+                            top: -30px;
+                            left: -30px;
+                            width: 80px;
+                            height: 80px;
+                            background: rgba(255,255,255,0.08);
+                            border-radius: 50%;
+                        "></div>
+                    </div>
+                    
+                    <div class="oferta-conteudo">
+                        <h3 class="oferta-titulo">ACESSO OFFICE 365 (1 ANO)</h3>
+                        <p style="text-align: center; margin-bottom: 15px; font-weight: 600;">
+                            Perfeita pra quem quer resolver agora sem compromisso 👇
+                        </p>
+                        
+                        <p style="font-weight: 600; margin-bottom: 10px;">Você vai receber:</p>
+                        <ul class="lista-beneficios">
+                            <li>Acesso ao Office 365 por 1 Ano</li>
+                            <li>Excel completo, sem limitações</li>
+                            <li>Word, Outlook e OneDrive liberados</li>
+                            <li>Uso pra trabalho, estudo ou pessoal</li>
+                            <li>Ativação simples e rápida</li>
+                        </ul>
+                        
+                        <div class="box-preco">
+                            <div class="preco-antigo">De R$60,00</div>
+                            <div class="preco-novo">R$10,00</div>
+                            <div style="
+                                display: inline-block;
+                                background: var(--vermelho);
+                                color: white;
+                                padding: 5px 15px;
+                                border-radius: 20px;
+                                font-weight: 600;
+                                font-size: 0.9rem;
+                                margin-top: 10px;
+                            ">
+                                ECONOMIZE 83%
+                            </div>
+                        </div>
+                        
+                        <p style="text-align: center; font-style: italic; margin: 15px 0; color: var(--azul);">
+                            👉 Ideal pra quem quer testar e já sentir a diferença.
+                        </p>
+                        
+                        <button class="btn-oferta" onclick="comprarOferta('6meses')">
+                            🚀 QUERO O OFFICE 365 POR 1 ANO
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- OFERTA 2 - COM LOGO OFFICE 365 PRO -->
+                <div class="oferta-card-2">
+                    <!-- LOGO OFFICE 365 PRO NO TOPO -->
+                    <div class="logo-office-container" style="
+                        height: 150px;
+                        background: linear-gradient(135deg, var(--verde), #0e6b0e);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        overflow: hidden;
+                    ">
+                        <!-- LOGO OFFICE 365 PRO -->
+                        <div style="
+                            text-align: center;
+                            color: white;
+                        ">
+                            <div style="
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 10px;
+                            ">
+                                <div style="
+                                    width: 50px;
+                                    height: 50px;
+                                    background: white;
+                                    border-radius: 8px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-right: 12px;
+                                ">
+                                    <div style="
+                                        color: var(--verde);
+                                        font-weight: 800;
+                                        font-size: 1.8rem;
+                                        font-family: 'Segoe UI', sans-serif;
+                                    ">
+                                        365
+                                    </div>
+                                </div>
+                                <div style="text-align: left;">
+                                    <div style="
+                                        font-size: 2rem;
+                                        font-weight: 700;
+                                        line-height: 1;
+                                        font-family: 'Segoe UI', sans-serif;
+                                    ">
+                                        Office
+                                    </div>
+                                    <div style="
+                                        font-size: 1.2rem;
+                                        opacity: 0.9;
+                                        font-weight: 400;
+                                    ">
+                                        Microsoft
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                                background: rgba(255,255,255,0.15);
+                                padding: 8px 20px;
+                                border-radius: 20px;
+                                display: inline-block;
+                                margin-top: 5px;
+                            ">
+                                VITALÍCIO + BÔNUS
+                            </div>
+                        </div>
+                        
+                        <!-- SELO MAIS VENDIDO -->
+                        <div style="
+                            position: absolute;
+                            top: 15px;
+                            right: 15px;
+                            background: var(--vermelho);
+                            color: white;
+                            padding: 8px 20px;
+                            border-radius: 20px;
+                            font-weight: 700;
+                            font-size: 0.9rem;
+                            transform: rotate(5deg);
+                            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                        ">
+                            MAIS VENDIDO
+                        </div>
+                        
+                        <!-- Efeitos decorativos -->
+                        <div style="
+                            position: absolute;
+                            bottom: -40px;
+                            right: -40px;
+                            width: 100px;
+                            height: 100px;
+                            background: rgba(255,255,255,0.15);
+                            border-radius: 50%;
+                        "></div>
+                        <div style="
+                            position: absolute;
+                            top: -30px;
+                            left: -30px;
+                            width: 80px;
+                            height: 80px;
+                            background: rgba(255,255,255,0.12);
+                            border-radius: 50%;
+                        "></div>
+                    </div>
+                    
+                    <div class="oferta-conteudo">
+                        <h3 class="oferta-titulo" style="color: var(--verde);">🚀 ACESSO OFFICE 365 (VITALÍCIO)</h3>
+                        <p style="text-align: center; margin-bottom: 15px; font-weight: 600;">
+                            Aqui é pra quem quer tranquilidade, organização e produtividade o ano inteiro.
+                        </p>
+                        
+                        <p style="font-weight: 600; margin-bottom: 10px;">Você vai receber:</p>
+                        <ul class="lista-beneficios">
+                            <li>Tudo da oferta de 1 ANO</li>
+                            <li>Acesso ao Office 365 por Vitalício</li>
+                            <li>Excel sem nenhuma limitação (fórmulas, tabelas, relatórios)</li>
+                            <li>Word e Outlook com padrão profissional</li>
+                            <li>OneDrive pra salvar tudo com segurança</li>
+                            <li>Menos stress, menos improviso e mais foco</li>
+                            <li>Organização total do trabalho e dos arquivos</li>
+                            <li>Mais resultado no dia a dia</li>
+                        </ul>
+                        
+                        <div style="
+                            background: linear-gradient(135deg, rgba(16,124,16,0.1), rgba(16,124,16,0.05));
+                            border-radius: 10px;
+                            padding: 20px;
+                            margin: 20px 0;
+                            border-left: 4px solid var(--verde);
+                        ">
+                            <p style="font-weight: 700; color: var(--verde); margin-bottom: 10px; text-align: center;">
+                                🎁 BÔNUS EXCLUSIVOS DO PLANO VITALÍCIO
+                            </p>
+                            <ul class="lista-beneficios">
+                                <li>Templates prontos de Excel (financeiro, tarefas e projetos)</li>
+                                <li>Guia rápido de organização usando o Office</li>
+                                <li>Tutorial simples pra usar tudo sem complicação</li>
+                            </ul>
+                        </div>
+                        
+                        <p style="font-weight: 700; text-align: center; margin: 20px 0; color: var(--azul-escuro);">
+                            💡 Você ativa uma vez e trabalha o ano inteiro sem dor de cabeça.
+                        </p>
+                        
+                        <div class="box-preco">
+                            <div class="preco-antigo">De R$197,00</div>
+                            <div class="preco-novo">R$27,00</div>
+                            <div style="
+                                display: inline-block;
+                                background: var(--vermelho);
+                                color: white;
+                                padding: 5px 15px;
+                                border-radius: 20px;
+                                font-weight: 600;
+                                font-size: 0.9rem;
+                                margin-top: 10px;
+                            ">
+                                ECONOMIZE 86%
+                            </div>
+                        </div>
+                        
+                        <p style="font-weight: 700; text-align: center; margin: 15px 0; color: var(--vermelho);">
+                            🔥 Melhor custo-benefício disparado.
+                        </p>
+                        
+                        <button class="btn-oferta oferta2" onclick="comprarOferta('1ano')">
+                            🏆 QUERO O OFFICE 365 PRA SEMPRE COM BÔNUS
+                        </button>
+                        
+                        <div style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            margin-top: 20px;
+                            padding: 15px;
+                            background: #f9f9f9;
+                            border-radius: 10px;
+                            border: 1px dashed var(--verde);
+                        ">
+                            <div style="color: var(--verde); font-size: 1.5rem;">🔒</div>
+                            <div style="font-size: 0.9rem; color: #666;">
+                                <strong>Garantia de 7 dias:</strong> Se não gostar, devolvemos seu dinheiro!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="secao-faq">
+        <div class="container">
+            <h2 class="titulo-secao">❓ PERGUNTAS FREQUENTES</h2>
+            
+            <div class="faq-item">
+                <div class="faq-pergunta">1. O Office é completo mesmo?</div>
+                <div class="faq-resposta">
+                    Sim. Todas as ferramentas liberadas, sem limitações. Você terá acesso completo ao Excel, Word, PowerPoint, Outlook, OneDrive, OneNote, Teams, Access, Publisher e todas as funcionalidades disponíveis.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-pergunta">2. Funciona no meu computador?</div>
+                <div class="faq-resposta">
+                    Sim, funciona em Windows 10/11 e também online através do navegador. É compatível com a maioria dos sistemas operacionais atuais.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-pergunta">3. A ativação é simples?</div>
+                <div class="faq-resposta">
+                    Muito simples. Você recebe o passo a passo detalhado com imagens. A maioria dos usuários consegue ativar em menos de 10 minutos.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-pergunta">4. Preciso pagar mensalidade?</div>
+                <div class="faq-resposta">
+                    Não. O acesso já vem ativado pelo período escolhido (1 ano ou Vitalício). Pagamento único, sem surpresas.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-pergunta">5. É seguro usar?</div>
+                <div class="faq-resposta">
+                    Sim, uso normal para trabalho, estudo e tarefas do dia a dia. Milhares de usuários já ativaram sem problemas.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 Office 365 Completo | Página de divulgação</p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                Esta é uma página demonstrativa para fins de apresentação.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT OTIMIZADO PARA MOBILE -->
+    <script>
+        // 1. DATA DINÂMICA PARA ESCASSEZ
+        function atualizarData() {
+            const hoje = new Date();
+            const dataFormatada = hoje.toLocaleDateString('pt-BR', {
+                weekday: 'long',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+            
+            const dataCapitalizada = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1);
+            document.getElementById('data-atual').textContent = dataCapitalizada;
+        }
+        
+        // 2. CARROSSEL WHATSAPP
+        function iniciarCarrossel() {
+            const dots = document.querySelectorAll('.dot');
+            const conversas = document.querySelectorAll('.whatsapp-conv');
+            let slideAtual = 0;
+            
+            function mostrarSlide(indice) {
+                conversas.forEach(c => c.style.display = 'none');
+                conversas[indice].style.display = 'block';
+                
+                dots.forEach((d, i) => {
+                    d.classList.toggle('ativo', i === indice);
+                });
+                
+                slideAtual = indice;
+            }
+            
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    mostrarSlide(parseInt(this.dataset.slide));
+                });
+            });
+            
+            // Auto-rotate
+            setInterval(() => {
+                let proximo = slideAtual + 1;
+                if (proximo >= conversas.length) proximo = 0;
+                mostrarSlide(proximo);
+            }, 5000);
+        }
+        
+        // 3. FAQ ACCORDION
+        function iniciarFAQ() {
+            const perguntas = document.querySelectorAll('.faq-pergunta');
+            
+            perguntas.forEach(pergunta => {
+                pergunta.addEventListener('click', function() {
+                    const resposta = this.nextElementSibling;
+                    const aberto = resposta.classList.contains('ativo');
+                    
+                    // Fechar todos
+                    document.querySelectorAll('.faq-resposta').forEach(r => {
+                        r.classList.remove('ativo');
+                        r.style.maxHeight = '0';
+                    });
+                    
+                    document.querySelectorAll('.faq-pergunta').forEach(p => {
+                        p.classList.remove('ativo');
+                    });
+                    
+                    // Abrir se estava fechado
+                    if (!aberto) {
+                        resposta.classList.add('ativo');
+                        resposta.style.maxHeight = resposta.scrollHeight + 'px';
+                        this.classList.add('ativo');
+                    }
+                });
+            });
+            
+            // Abrir primeiro
+            if (perguntas.length > 0) {
+                setTimeout(() => perguntas[0].click(), 800);
+            }
+        }
+        
+        // 4. COMPRAR OFERTA
+        function comprarOferta(tipo) {
+            const oferta = tipo === '6meses' 
+                ? 'Office 365 por 1 Ano - R$10,00' 
+                : 'Office 365 por Vitalício com bônus - R$27,00';
+            
+            alert(`✅ Ótima escolha! Você selecionou: ${oferta}\n\nEm uma implementação real, você seria redirecionado para o checkout.`);
+            
+            // Em produção:
+            // window.location.href = tipo === '6meses' ? '/checkout-6m' : '/checkout-1ano';
+        }
+        
+        // 5. INICIALIZAR TUDO
+        document.addEventListener('DOMContentLoaded', function() {
+            atualizarData();
+            iniciarCarrossel();
+            iniciarFAQ();
+            
+            // Performance mobile
+            if ('performance' in window) {
+                setTimeout(() => {
+                    const perf = performance.timing;
+                    const loadTime = perf.loadEventEnd - perf.navigationStart;
+                    console.log('📱 PageSpeed Mobile: Carregado em', loadTime + 'ms');
+                }, 0);
+            }
+        });
+    </script>
+</body>
+</html>
